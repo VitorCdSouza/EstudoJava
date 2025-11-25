@@ -11,7 +11,7 @@ public class GaragemSistema {
         
         System.out.println("=== INICIANDO SISTEMA DE GARAGEM ===");
 
-        // --- 1. Tratamento de Exceções (Slides Try Catch) ---
+        // --- 1. Tratamento de Exceções ---
         try {
             // Tentando criar veículos
             Carro c1 = new Carro("Toyota", "Corolla", 100000, 4);
@@ -23,7 +23,7 @@ public class GaragemSistema {
             // String testeNull = null;
             // testeNull.toUpperCase(); // Descomente para testar o Catch
             
-            // --- 2. Coleções: List (Slides Collections Parte 1 e 2) ---
+            // --- 2. Coleções: List ---
             List<Veiculo> listaVeiculos = new ArrayList<>();
             listaVeiculos.add(c2);
             listaVeiculos.add(c1); // Adicionado fora de ordem propositalmente
@@ -44,7 +44,7 @@ public class GaragemSistema {
                 System.out.println(v);
             }
 
-            // --- 4. Polimorfismo e Interface (Slides SPODEOO e Interfaces) ---
+            // --- 4. Polimorfismo e Interface ---
             System.out.println("\n--- Executando Ações (Polimorfismo) ---");
             for (Veiculo v : listaVeiculos) {
                 // Cada objeto calcula o imposto de forma diferente
@@ -54,7 +54,7 @@ public class GaragemSistema {
                 v.realizarRevisao();
             }
 
-            // --- 5. Coleções: Map (Slides Collections Parte 3) ---
+            // --- 5. Coleções: Map ---
             // Mapeando Placa (String) -> Veículo (Objeto)
             Map<String, Veiculo> mapaPlacas = new HashMap<>();
             mapaPlacas.put("ABC-1234", c1);
@@ -66,7 +66,7 @@ public class GaragemSistema {
                 System.out.println("Veículo encontrado pela placa: " + busca.getModelo());
             }
 
-            // --- 6. Atributo Static e Comparação de Objetos (Slides Equals/HashCode) ---
+            // --- 6. Atributo Static e Comparação de Objetos ---
             System.out.println("\n--- Testes Finais ---");
             System.out.println("Total de veículos instanciados (Static): " + Veiculo.contadorVeiculos);
             

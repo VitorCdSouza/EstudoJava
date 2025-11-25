@@ -74,6 +74,18 @@ public class GaragemSistema {
             // Testando o método equals() que sobrescrevemos
             System.out.println("Carro c1 é igual ao c3 (mesma marca/modelo)? " + c1.equals(c3));
 
+            // --- 7. JAVA IO (Slides Java IO Parte 1 e 2) ---
+            System.out.println("\n--- Testando Java IO (Gravação e Leitura) ---");
+            
+            GerenciadorArquivos arquivo = new GerenciadorArquivos();
+            String nomeDoArquivo = "backup_garagem.bin"; // Extensão .bin para indicar arquivo binário
+
+            // 1. Gravar a lista atual no arquivo
+            arquivo.salvarRelatorio(listaVeiculos, nomeDoArquivo);
+
+            // 2. Ler do arquivo byte a byte e mostrar no console
+            arquivo.lerRelatorio(nomeDoArquivo);
+
         } catch (NullPointerException e) {
             System.err.println("Erro: Tentativa de usar um objeto nulo.");
         } catch (Exception e) {
